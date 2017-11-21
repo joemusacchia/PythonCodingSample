@@ -25,4 +25,4 @@ API_KEY = 'your_key_here'
 
 #### NOTE ON TECHNOLOGY:
 
-I utilized `urllib.request` with the `urlopen()` method to access the API endpoint using `with...as url:`.  I then convert the returned `url` HTTP response as a json object/python dictionary.  At each raw data return, I used the `pdb.set_trace()` debugger statement to investigate the returned the data to manually extract the desired values.
+I utilized `urllib.request` with the `urlopen()` method to access the API endpoint using `with...as url:`.  I then convert the returned `url` HTTP response as a json object/python dictionary.  At each raw data return, I used the `pdb.set_trace()` debugger statement to investigate the returned data to manually extract the desired values.
