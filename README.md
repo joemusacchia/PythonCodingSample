@@ -2,7 +2,7 @@
 
 ## Python coding sample for accessing json data on the web
 
-I wrote a python script to access data from API endpoints on the web.  The user provides an address, a city, and a state at the command prompt.  The script use the Google Maps Geocoding API to convert the address into lat and long coordinates.  The coordinates are then used to find elevation from the Google Maps Elevation API and the location's current forecast from the National Weather Service.
+I wrote a python script to access data from API endpoints on the web.  The user provides an address, a city, and a state at the command prompt.  The script use the Google Maps Geocoding API to convert the address into lat and long coordinates.  The coordinates are then used to find elevation from the Google Maps Elevation API, the location's current forecast from the National Weather Service, and the latest job openings posted to Github jobs (if available).
 
 ## Technology and setup
 
