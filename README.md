@@ -14,7 +14,7 @@ To run the script, clone down this repo and then execute in the terminal from th
 ```
 $ python3.6 access_json_data.py
 ```
-Be sure to use `Python3.X` since the formatted string interpolation syntax (e.g. `f'Hi my name is {my_name_var}`) is specific to `Python3.X`.
+Be sure to use `Python3.X` since the formatted string interpolation syntax (e.g. `f'Hi my name is {my_name_var}'`) is specific to `Python3.X`.
 
 #### NOTE ON SETUP:
 
