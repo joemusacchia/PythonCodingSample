@@ -4,6 +4,8 @@
 
 I wrote a python script to access data from API endpoints on the web.  The user provides an address, a city, and a state at the command prompt.  The script use the Google Maps Geocoding API to convert the address into lat and long coordinates.  The coordinates are then used to find elevation from the Google Maps Elevation API, the location's current forecast from the National Weather Service, and the latest job openings posted to Github jobs (if available).
 
+This most current version (ver 2) attempts to add OOP to this script.
+
 ## Technology and setup
 
 This script uses Python3.6, so you will need to have that installed.  You can do so on Mac OSX via:
