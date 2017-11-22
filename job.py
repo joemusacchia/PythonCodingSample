@@ -1,4 +1,4 @@
-import urllib.request, json
+from getapidata import Getapidata
 
 class Job:
     def __init__(self, location_object):
@@ -10,7 +10,5 @@ class Job:
         self.github_jobs_url = f'https://jobs.github.com/positions.json?lat={latitude}&long={longitude}'
 
     def get_github_jobs_data(self):
-        print('Finding recent jobs in your area on Github jobs...')
-        with urllib.request.urlopen(self.github_jobs_url) as url:
-            self.raw_github_jobs_data = json.loads(url.read())
-        print('Done!\n')
+        api_data_obj = Getapidata(self.github_jobs_url,'Finding recent jobs in your area on Github jobs...')
+        self.raw_github_jobs_data = api_data_obj.get_data_from_api()

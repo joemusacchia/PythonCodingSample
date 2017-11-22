@@ -1,4 +1,4 @@
-import urllib.request, json
+from getapidata import Getapidata
 
 class Elevation:
     def __init__(self, location_object):
@@ -12,11 +12,8 @@ class Elevation:
         self.google_elevation_url = f'https://maps.googleapis.com/maps/api/elevation/json?locations={latitude},{longitude}&key={api_key}'
 
     def get_elevation_data(self):
-        print('Getting elevation from Google elevation API...')
-        with urllib.request.urlopen(self.google_elevation_url) as url:
-            raw_elevation_data = json.loads(url.read())
-        url.close()
-        print('Done!\n')
+        api_data_obj = Getapidata(self.google_elevation_url,'Getting elevation from Google elevation API...')
+        raw_elevation_data = api_data_obj.get_data_from_api()
 
         self.elevation = raw_elevation_data['results'][0]['elevation']
         self.resolution = raw_elevation_data['results'][0]['resolution']
