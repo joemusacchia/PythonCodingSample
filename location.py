@@ -1,4 +1,4 @@
-import urllib.request, json
+from getapidata import Getapidata
 
 class Location:
     def __init__(self, address, city, state, api_key):
@@ -14,12 +14,8 @@ class Location:
         self.pretty_print_address = self.pretty_print_address = f'{self.address}, {self.city}, {self.state}'
 
     def get_geocode_from_address(self):
-        print('\nAccessing Gooogle geocode API...')
-        with urllib.request.urlopen(self.google_geocode_url) as url:
-            raw_location_data = json.loads(url.read())
-        url.close()
-        print('Done!\n')
-
+        api_data_obj = Getapidata(self.google_geocode_url,'\nAccessing Gooogle geocode API...')
+        raw_location_data = api_data_obj.get_data_from_api()
         geocode_location = raw_location_data['results'][0]['geometry']['location']
         self.latitude = geocode_location['lat']
         self.longitude = geocode_location['lng']

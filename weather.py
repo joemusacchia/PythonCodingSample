@@ -11,6 +11,7 @@ class Weather:
 
     def get_weather_right_now(self):
         # I had figured out via curl that the headers this server required weren't working with the implicit method so I had to create another request object containing the header and pass that into urlopen()
+        # I can't use my Getapidata class here because that class uses a url to get data, whereas here I have to manually create a Request object and pass that in to access this api
         req = urllib.request.Request(self.national_weather_service_url, headers={'Accept': '*/*'} )
 
         print('Getting current weather from National Weather Service...')
